@@ -1,8 +1,32 @@
-# Minimal uv package manager config (uv chosen as package manager)
+# Full project metadata, classifiers, and MIT license
 [project]
 name = "noumenal"
+version = "0.0.0"
+description = "A project named noumenal."
+readme = "README.md"
 requires-python = ">=3.14"
+authors = [ { name = "Michael Nau", email = "michaelwnau@gmail.com" } ]
+license = { text = "MIT" }
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Software Development :: Libraries",
+]
 
-[uv]
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+# Basic ruff configuration
+line-length = 88
+extend-ignore = ["E203", "W503"]
+
+[tool.uv]
+# Indicate uv is the chosen package manager for this project
 package-manager = "uv"
 # Add uv-managed dependencies here when you install packages with uv
