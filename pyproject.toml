@@ -1,19 +1,8 @@
+# Minimal uv package manager config (uv chosen as package manager)
 [project]
 name = "noumenal"
-version = "0.0.0"
-description = ""
-readme = "README.md"
 requires-python = ">=3.14"
 
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[tool.ruff]
-# Basic ruff configuration
-line-length = 88
-extend-ignore = ["E203", "W503"]
-
-[tool.uv]
-# Indicate uv is the chosen package manager for this project
+[uv]
 package-manager = "uv"
+# Add uv-managed dependencies here when you install packages with uv
